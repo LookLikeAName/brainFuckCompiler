@@ -26,12 +26,12 @@ var ini= function(){
 
     uniConFlag=false;
     uniChar=[];
-
-    convertedCode=""
+    
 }
 
 var opreatorCheck = function()
 {
+    
     for(i=0;i<operArr.length;i++){
         if(operArr[i].value==""){
             alert("operator error:operator can't be nothing");
@@ -194,11 +194,16 @@ var excuteAll = function()
 }
 
 var operConvert = function(){
-    unConvertedCode=codeMain.value;
-    codeMain.value=codeMain.value.replace(/\r\n|\n/g,"").replace(/>/g,ptrNextOper.value).replace(/</g,ptrLastOper.value)
-    .replace(/\+/g,plusOper.value).replace(/-/g,minustOper.value).replace(/\./g,charOutOper.value)
-    .replace(/,/g,charInOper.value).replace(/\[/g,loopStartOper.value).replace(/]/g,loopEndOper.value)
-    .replace(/'/g,uniConOper.value);
+
+    if(opreatorCheck()){
+        if(unConvertedCode==""){
+            unConvertedCode=codeMain.value;
+        }
+        codeMain.value=unConvertedCode.replace(/\r\n|\n/g,"").replace(/>/g,ptrNextOper.value).replace(/</g,ptrLastOper.value)
+        .replace(/\+/g,plusOper.value).replace(/-/g,minustOper.value).replace(/\./g,charOutOper.value)
+        .replace(/,/g,charInOper.value).replace(/\[/g,loopStartOper.value).replace(/]/g,loopEndOper.value)
+        .replace(/'/g,uniConOper.value);
+    }
 }
 
 var operConvertRe= function(){

@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id='topBanner'></div>
+    <div id='topBanner'>Brainfuck</div>
     <div id='mainContainer'>
         <div id='leftContainer'>
             
             <p>個人化運算子</p>
-            <p>> <input id="ptrNextOper" onfocus="this.value=''"  value=">"></p>
-            <p>< <input id="ptrLastOper" onfocus="this.value=''" value="<"></p>
-            <p>+ <input id="plusOper" onfocus="this.value=''" value="+"></p>
-            <p>- <input id="minusOper" onfocus="this.value=''" value="-"></p>
-            <p>. <input id="charOutOper" onfocus="this.value=''" value="."></p>
-            <p>, <input id="charInOper" onfocus="this.value=''" value=","></p>
-            <p>[ <input id="loopStartOper" onfocus="this.value=''" value="["></p>
-            <p>] <input id="loopEndOper" onfocus="this.value=''" value="]"></p>
-            <p>' <input id="uniConOper" onfocus="this.value=''" value="'"></p>
+            <p>> <input id="ptrNextOper" onfocus="this.value=''"  value=">" name=">"></p>
+            <p>< <input id="ptrLastOper" onfocus="this.value=''" value="<" name="<"></p>
+            <p>+ <input id="plusOper" onfocus="this.value=''" value="+" name="+"></p>
+            <p>- <input id="minusOper" onfocus="this.value=''" value="-" name="-"></p>
+            <p>. <input id="charOutOper" onfocus="this.value=''" value="." name="."></p>
+            <p>, <input id="charInOper" onfocus="this.value=''" value="," name=","></p>
+            <p>[ <input id="loopStartOper" onfocus="this.value=''" value="[" name="["></p>
+            <p>] <input id="loopEndOper" onfocus="this.value=''" value="]" name="]"></p>
+            <p>' <input id="uniConOper" onfocus="this.value=''" value="'" name="'"></p>
         </div>
         <div id='rightContainer'>
             code:
-                <p><textarea id='codeMain'></textarea></p>
-                <p>輸入值(請以空格分隔):<br>
+                <p><textarea id='codeMain' ></textarea></p>
+                <p>輸入值(請照順序輸入以空格分隔):<br>
         
-                <input id="inputData"></p>
-                <p><button id="excute" onclick="excuteAll()">執行</button>    <button id="operConvertButton" onclick="operConvert()">轉換為個人化運算子</button></p>
-                <button id="clearInput" type="reset">清除</button><br><br>
+                <input id="inputData" onchange="if(inputData.value==''){ unConvertedCode='';}"></p>
+                <p><button id="excute" onclick="excuteAll()">執行</button>    <button id="clearInput" onclick="codeMain.value=''; inputData.value=''; unConvertedCode='';">清除</button></p>
+                <button id="operConvertButton" onclick="operConvert()">轉換為個人化運算子</button><br>(如有修改程式碼，請先清除後再轉換)<br><br>
         
             output:
             <form>
