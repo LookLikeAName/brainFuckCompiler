@@ -1,3 +1,31 @@
+
+body{
+    background-color:#ECECEC;
+    margin: 0 ;
+    font-family: Microsoft JhengHei;
+}
+textarea{
+    width:80%;
+    height:200px;
+}
+#topBanner{
+    background-color: #4CAF50;
+    color: white;
+    width:100vw;
+    height:50px;
+}
+#leftContainer{
+    position: relative;
+    width:50%;
+    height:50%;
+    left: 20px;
+    float:left;
+}
+#rightContainer{
+    width:50%;
+    height:50%;
+    float:left;
+}
 button {
     background-color: #4CAF50;
     border: none;
@@ -9,28 +37,4 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-html{
-    background-color:#ECECEC;
-    font-family: Microsoft JhengHei;
-}
-textarea{
-    width:80%;
-    height:200px;
-}
-#topBanner{
-    background-color: #4CAF50;
-    color: white;
-    width:100%;
-    height:50px;
-}
-#leftContainer{
-    width:50%;
-    height:50%;
-    float:left;
-}
-#rightContainer{
-    width:50%;
-    height:50%;
-    float:left;
 }
