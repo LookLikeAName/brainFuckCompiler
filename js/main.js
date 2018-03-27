@@ -104,22 +104,27 @@ var parser = function()
         switch (code[progressCounter])
         {
             case ptrNextOper.value:
-                ptr++;
-                if(memArr.length<(ptr+1)){
+                ptr=(ptr+1)%3000;
+                while(memArr.length<(ptr+1)){
                     memArr.push(0);
                 }
                 debugLog("ptrNextOper",ptr);
             break;
             case ptrLastOper.value:
-                ptr--;
+                if(--ptr<0)
+                {
+                    ptr=2999;
+                }
                 debugLog("ptrLastOper",ptr);
             break;
             case plusOper.value:
-                memArr[ptr]++;
+                memArr[ptr]=(memArr[ptr]+1)%256;
                 debugLog("plusOper", memArr[ptr]);
             break;
             case minustOper.value:
-                memArr[ptr]--;
+                if(--memArr[ptr]<0){
+                    memArr[ptr]=255;
+                }
                 debugLog("minustOper", memArr[ptr]);
             break;
             case charOutOper.value:
