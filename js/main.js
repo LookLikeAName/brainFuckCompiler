@@ -114,6 +114,9 @@ var parser = function()
                 if(--ptr<0)
                 {
                     ptr=2999;
+                    while(memArr.length<(ptr+1)){
+                        memArr.push(0);
+                    }
                 }
                 debugLog("ptrLastOper",ptr);
             break;
