@@ -14,6 +14,10 @@ textarea{
     width:100vw;
     height:50px;
 }
+#mainContainer{
+    width:100%;
+    height:100%;
+}
 #leftContainer{
     position: relative;
     width:50%;
@@ -21,7 +25,14 @@ textarea{
     left: 20px;
     float:left;
 }
+#uniConOperMessage{
+    position: relative;
+    width:50%;
+    height:50%;
+    float:left;
+}
 #rightContainer{
+    position: relative;
     width:50%;
     height:50%;
     float:left;
@@ -37,4 +48,7 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+.oper{
+    width:100px;
 }

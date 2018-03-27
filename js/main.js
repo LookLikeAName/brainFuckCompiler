@@ -190,6 +190,10 @@ var excuteAll = function()
     }
     ini();
     parser();
+    if(uniConFlag){
+        alert("syntax error: ' operator should be in pair")
+        return;
+    }
     output.value+=outputStr;
 }
 
@@ -210,7 +214,39 @@ var operConvertRe= function(){
     codeMain.value=unConvertedCode;
 }
 
-
+var changeSample = function (value)
+{
+    switch(value){
+        case "0":
+            operArr.forEach(
+                element=>{
+                    element.value=element.name;
+                }
+            )
+            codeMain.value="";
+        break;
+        case "1":
+        operArr.forEach(
+            element=>{
+                element.value=element.name;
+            }
+        )
+        codeMain.value="++++++++++[>>+++++++[<++++++++++>-]<+..++.>>++++++[<+++++++++++++>-]<.<.>.----------.+.+++++++++++++.>++++++++++.[-]<[-]<[-]<-]";
+        break;
+        case "2":
+            ptrNextOper.value='啊';
+            ptrLastOper.value='挖';
+            plusOper.value='島';
+            minustOper.value='能';
+            charOutOper.value='輝';
+            charInOper.value='ㄟ';
+            loopStartOper.value='力';
+            loopEndOper.value='丟';
+            uniConOper.value='喜';
+            codeMain.value="島島島島喜輝啊島島力挖島島島島島啊能丟挖輝啊島島島島島島島輝挖輝喜啊能能能喜輝挖輝能能能能能輝啊輝喜挖能喜輝啊力能丟島島輝挖島島島輝啊能輝喜啊島島島島島喜輝島島島島輝挖輝挖能輝喜";
+        break;
+    }
+}
 
 var debugLog = function(){
     if(debug)
