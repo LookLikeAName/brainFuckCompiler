@@ -29,7 +29,7 @@ var ini= function(){
     
 }
 
-var opreatorCheck = function()
+var operatorCheck = function()
 {
     
     for(i=0;i<operArr.length;i++){
@@ -192,7 +192,7 @@ var parser = function()
 
 var excuteAll = function()
 {
-    if(!scanner()||!inputCheck()||!opreatorCheck())
+    if(!scanner()||!inputCheck()||!operatorCheck())
     {
         return ;
     }
@@ -207,7 +207,7 @@ var excuteAll = function()
 
 var operConvert = function(){
 
-    if(opreatorCheck()){
+    if(operatorCheck()){
         if(unConvertedCode==""){
             unConvertedCode=codeMain.value;
         }
