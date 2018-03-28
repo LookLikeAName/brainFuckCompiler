@@ -269,6 +269,14 @@ var changeSample = function (value)
             )
             codeMain.value="++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.";
         break;
+        case "5":
+            operArr.forEach(
+                element=>{
+                    element.value=element.name;
+                }
+            )
+            codeMain.value="+[[->]-[-<]>-]>.>>>>.<<<<-.>>-.>.<<.>>>>-.<<<<<++.>>++.";
+        break;
     }
 }
 
