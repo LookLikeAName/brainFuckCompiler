@@ -82,7 +82,7 @@ var inputCheck=function(){
     {
         if(input[i].length>1||input[i].charCodeAt(0)>127)
         {
-            alert("input error",input[i]);
+            alert("input error"+input[i]);
             return 0;
         }
     }
