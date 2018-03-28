@@ -169,6 +169,7 @@ var parser = function()
             }
             else
             {
+                uniConFlag=false;
                 debugLog("uniConOper",uniConFlag);
                 if(uniChar.length!=4){
                     alert("unicode error:invalid input number");
@@ -183,7 +184,6 @@ var parser = function()
                 }
                 outputStr+=eval("'\\u"+uniChar[0]+uniChar[1]+uniChar[2]+uniChar[3]+"'");
                 uniChar=[];
-                uniConFlag=false;
             }
             break;
         }
