@@ -67,7 +67,7 @@ var scanner=function(){
             case uniConOper.value:
             break;
             default:
-                alert("syntax error:unkonw opreator",code[i]);
+                alert("syntax error:unknown operator",code[i]);
                 return 0;
             break;
         }

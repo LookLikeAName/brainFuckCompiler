@@ -23,5 +23,5 @@ var inputData=document.getElementById("inputData");
 var excute=document.getElementById("excute");
 var clearInput=document.getElementById("clearInput");
 
-var clearInput=document.getElementById("output");
-var clearInput=document.getElementById("clearOutput");
+var output=document.getElementById("output");
+var clearOutput=document.getElementById("clearOutput");
